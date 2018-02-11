@@ -6,8 +6,8 @@ services:
 script:
   - docker-compose up -d
 
-  after_success:
-    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-      docker push docker.io/chinkit/australianbsb_db:latest;
-      docker push docker.io/chinkit/australianbsb_api:latest;
-      docker push docker.io/chinkit/australianbsb_web:latest;
+after_success:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push docker.io/chinkit/australianbsb_db:latest;
+    docker push docker.io/chinkit/australianbsb_api:latest;
+    docker push docker.io/chinkit/australianbsb_web:latest;

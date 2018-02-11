@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  db:
+    build:
+      context: ./src/db
+    image: chinkit/australianbsb_db:latest
+
+  api:
+    build: 
+      context: ./src/api
+    image: chinkit/australianbsb_api:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/api/:/code
+    depends_on:
+      - "db"
+  
+  web:
+    build:
+      context: ./src/web
+    image: chinkit/australianbsb_web:latest
+    ports:
+      - "9000:9000"
+    depends_on:
+      - "api"

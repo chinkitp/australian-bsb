@@ -1,5 +1,5 @@
 FROM node
-RUN npm install
 ADD . /code
 WORKDIR /code
+RUN npm install
 CMD ["node", "index.js"]

@@ -15,6 +15,8 @@ services:
       - ./src/api/:/code
     depends_on:
       - "db"
+    # entrypoint: sh
+    # tty: true
   
   web:
     build:

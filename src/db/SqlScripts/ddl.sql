@@ -6,7 +6,7 @@ CREATE TABLE KeyAbbreviations
 (
     BankCode VARCHAR(3) NOT NULL, 
     BankName VARCHAR(500) NOT NULL,
-    BankCount VARCHAR(10) NULL
+    BankCount VARCHAR(16) NULL
 );
 
 CREATE TABLE BsbDirectory

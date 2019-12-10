@@ -10,5 +10,3 @@ Australian bank's BSB information deployed in a docker container.. http://www.ap
 - In the root folder run 
     `docker-compose up` 
 - Open your brower http://localhost:9000/ 
-
-Test with Azure boards
